@@ -13,7 +13,7 @@ from zope.interface import implementer
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 
-client = vt.Client('5e18fd6903e0b2dbd1785ef66ec914f54d9c87893645bc814b85830f24e3d089')
+client = vt.Client('APIKEY')
 
 log.startLogging(sys.stdout)
 
