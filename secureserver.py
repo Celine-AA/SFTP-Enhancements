@@ -19,7 +19,7 @@ log.startLogging(sys.stdout)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 USER_DIRS = {
-    "ayham": os.path.join(BASE_DIR, "users", "ayham"),
+    "salma": os.path.join(BASE_DIR, "users", "salma"),
     "celine": os.path.join(BASE_DIR, "users", "celine"),
 }
 for path in USER_DIRS.values():
@@ -89,7 +89,6 @@ class FileReader:
 
 class FileWriter:
     def __init__(self, file):
-        from hashlib import md5
         self.file = file
         self.iv = os.urandom(16)
         self.encryptor = get_cipher(self.iv).encryptor()
@@ -406,7 +405,7 @@ def run():
     sftp_factory.portal = portal.Portal(SimpleRealm())
 
     checker = LoggingPasswordChecker()
-    checker.addUser(b"ayham", b"ayham")
+    checker.addUser(b"salma", b"salma")
     checker.addUser(b"celine", b"celine")
     sftp_factory.portal.registerChecker(checker)
 
